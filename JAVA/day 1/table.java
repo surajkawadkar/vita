@@ -8,3 +8,20 @@ public class table
         }
     }
 }
+
+/*
+
+E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 1>javac table.java
+
+E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 1>java table
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+*/
