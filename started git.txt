@@ -1,0 +1,7 @@
+
+E:\Courses\VITA\VITA-PROGRAMS>git init
+Initialized empty Git repository in E:/Courses/VITA/VITA-PROGRAMS/.git/
+
+E:\Courses\VITA\VITA-PROGRAMS>git remote add origin https://github.com/surajkawadkar/vita.git
+
+E:\Courses\VITA\VITA-PROGRAMS>
