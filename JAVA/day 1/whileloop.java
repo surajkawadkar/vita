@@ -6,8 +6,15 @@
         int i=3;
         while(i<31)
         if (i==23){
-            continue;
+	continue;
+	i++;
+            
         }
-            System.out.println(i);
+	else{
+
+System.out.println(i);
+	
+}
+            
         }
     }

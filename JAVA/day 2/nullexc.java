@@ -1,4 +1,4 @@
-class a{
+class abc{
     void display(){
 
     System.out.println("fjaklds"); }
@@ -7,8 +7,8 @@ class a{
 
 class nullexc{
     public static void main(String args[]){
-        a s1 = new a();
+        abc s1 = new abc();
         s1=null;
-        s1.disp();
+        s1.dispay();
     }
 }
