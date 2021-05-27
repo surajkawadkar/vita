@@ -1,0 +1,228 @@
+
+Q1
+
+//1)create a class "Shape" with 2 attributes, "width" and "height". Make sure one can not access these attributes directly.
+//provide accessor methods on these attributes and allow them to call from outside of your class.
+class shape_w_h{
+    int height;
+    int width;
+    void setWidth(int width){
+    this.width=width;
+    }
+
+    void setHeight(int height){
+    this.height=height;
+    }
+    int getWidth(){
+        return this.width;
+    }
+
+    int getHeight(){
+        return this.height;
+    }
+    
+}
+
+
+class shape{  //main class
+    public static void main(String args[]){  //main method
+    shape_w_h s1 = new shape_w_h();
+    s1.setWidth(23);
+    s1.setHeight(5);
+    System.out.println("width is "+s1.getWidth()+"height is "+s1.getHeight());
+
+    }
+}
+
+
+
+=====================================================================
+Q2
+
+// 2) Define a class "MyClass" and make sure clients can instantiate it , 
+// a) without any argument
+// b) with one int argument
+//c) with two int arguments
+
+
+class myClass{
+    
+    myClass(){
+        System.out.println("this is default constructor"); //print when object is instaniate
+    }
+    myClass(int num1){
+         System.out.println("this is parameterize constructor with 1 argument"); //print when object is instaniate
+        this.num1=num1;
+                
+    }
+
+    private int num1;
+    void setNum1(int num1){
+        this.num1=num1;
+    }
+    int getNum1(){
+        return num1;
+    }
+
+    myClass(int num2, int num3){
+        System.out.println("this is parameterize constructor with 2 argument");//print when object is instaniate
+        this.num2=num2;
+        this.num3=num3;
+    }
+    private int num2;
+    private int num3;
+    void setNum2(int num2, int num3){
+        this.num2=num2;
+        this.num3=num3;
+    }
+    void getNum2(){
+        
+       System.out.println("one param= "+this.num2+"two param= "+this.num3);
+    }
+}
+class construc{
+    public static void main(String args[]){
+        myClass s1= new myClass();
+        myClass s2= new myClass(12);
+        myClass s3= new myClass(11,12);
+        System.out.println("one param= "+s2.getNum1());
+         s3.getNum2();
+    }
+}
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>javac construc.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>java construc
+// this is default constructor
+// this is parameterize constructor with 1 argument
+// this is parameterize constructor with 2 argument
+// one param= 12
+// one param= 11two param= 12
+
+=========================================================================================
+Q3
+// 3) Define a class "Emp" with private static member "int cnt".
+// How will u make sure that outsiders can read the value of cnt ?
+
+class static_cnt{
+    private static int cnt=89;
+
+    public static void main(String[] args){
+        //cnt=99;   this also work
+        System.out.println(cnt);
+    }
+}
+
+//E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>javac static_cnt.java
+
+//E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>java static_cnt
+//39
+=============================================================================================
+Q4
+//  Define a class "DemoOb". 
+// create an instance of it.
+// now create a reference and assign the reference created in the above statement.
+// 	Discuss what happens?
+// Now since u have 2 references, take one of the reference and assign a new instance of the class.
+// 	Discuss what happens?
+// (For ur discussion, write necessary comments in the program)
+
+class demoOb{
+    void display(){ //member function
+        System.out.println("this is display1 class");
+    }
+    void display2(){
+        System.out.println("this is display2 class");
+    }
+    
+}
+
+class reference{
+    public static void main(String[] args){
+        demoOb s1=new demoOb(); //crete a instancec of demoonb class
+        demoOb s2=s1;
+        s1.display();
+        s2.display();   
+        s1.display2();
+        s2.display2(); 
+
+    }
+
+}
+
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>javac reference.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>java  reference
+// this is display1 class
+// this is display1 class
+// this is display2 class
+// this is display2 class
+
+=====================================================================================
+Q5 and Q6
+// Define 3 classes A , B and C
+// in all these classes create static and nonstatic variables as well as methods.
+// 	Now Define a class "Demo" ,in which define "main" function. From this main function try to access all the members of A ,B  and C.
+
+class A{
+    static int num1=40;
+    int num2=2;
+    static void display(){
+     System.out.println("A class display");
+
+}
+}
+class B{
+    static int num1=10;
+    int num2=23;
+    static void display(){
+     System.out.println("B class display");
+
+}
+}
+class C{
+    static int num1=20;
+    int num2=11;
+    static void display(){
+     System.out.println("C class display");
+
+}
+}
+
+class stat_nonstat{
+    public static void main (String args[]){
+        A s1=new A();
+        B s2 = new B();
+        C s3=new C();
+        System.out.println(s1.num1);
+        System.out.println(s1.num2);
+        s1.display();
+
+         System.out.println(s2.num1);
+        System.out.println(s2.num2);
+        s2.display();
+
+         System.out.println(s3.num1);
+        System.out.println(s3.num2);
+        s3.display();
+
+    }
+}
+
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>javac stat_nonstat.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 2>java stat_nonstat
+// 40
+// 2
+// A class display
+// 10
+// 23
+// B class display
+// 20
+// 11
+// C class display
