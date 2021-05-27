@@ -1,7 +1,7 @@
 class Student{
     String name="suraj";
     int age;
-    void setName(String str)
+    void setName(String str)  //STR IS   A LOCAL MEMBER
 	{
 		name=str;
 	}
