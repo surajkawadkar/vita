@@ -1,0 +1,141 @@
+// 1)	Define 2 classes “First” and “Second” with member variables , 
+// member functions and constructors of  your choice. Now define a class “Two” in which define main function .
+//In main function create various instances of First and Second  and call their individual member functions.
+class first{
+    int num;
+    void  setNum(int num){
+        this.num=num;
+
+    }
+    int getNum(){
+        return this.num;
+    }
+
+}
+
+class second{
+    String name ;
+    void  setName(String name){
+        this.name=name;
+
+    }
+    String getName(){
+        return this.name;
+    }
+
+}
+
+class member_access{
+    public static void main(String arg[]){
+        first s1= new first();
+        second s2= new second();
+        s1.setNum(78);
+        s2.setName("black");
+        System.out.println(s1.getNum()+"and name is "+s2.getName());
+    }
+}
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>javac member_access.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>java member_access
+// 78and name is black
+===================================================================================
+
+
+// 2)	Create a class with static and non-static member variables.
+//  Define static and non-static member functions. Create instance of 
+//  this class and call both static and non-static member functions
+
+class A{
+    static int num=20;
+    int num2=10;
+    static void display(){
+
+        System.out.println("static function ");
+    }
+
+    void display2(){
+        System.out.println("non static function ");
+    }
+}
+
+class stat_nonstat{
+    public static void main(String args[]){
+        A s1 =new A(); //create instance of class
+        System.out.println(A.num); //called static instance variable using class.variable
+        A.display(); //use class name to call static method
+        System.out.println(s1.num2); //use referemce to call non static  variable
+        s1.display2(); //use ref to call nonstatic method
+        
+    }
+}
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>javac stat_nonstat.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>java stat_nonstat
+// 20
+// static function
+// 10
+// non static function
+
+
+===================================================================================
+
+/*
+3)	Define a class “Check” in which declare member variables using  different
+ accessibility modifiers i.e.  <default>, private ,public and protected. 
+   Define a function “disp”  which should be public.
+     Define a class “CheckDemo” in which you will write “main()” function.
+      Create an instance of  the class “Check” and  show how many
+  variables can be accessed directly and how many indirectly
+
+
+
+*/
+class check{
+int num1=10; //default
+private int num2=20;//private
+public int num3=30; //public
+protected int num4=40; //protected
+public void disp(){
+    System.out .println(num1);
+    System.out .println(num2);
+    System.out .println(num3);
+    System.out .println(num4);
+}
+}
+
+
+
+
+
+
+class checkDemo{
+    public static void main(String args[]){
+        check s1 = new check();
+        System.out.println(s1.num1);
+        //System.out.println(s1.num2); direct cannot access because or private modifier 
+        System.out.println(s1.num3);
+        System.out.println(s1.num4);
+        System.out.println("disp method");
+
+    s1.disp();
+    }
+}
+
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>javac checkDemo.java
+
+// E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 3>java checkDemo
+// 10
+// 30
+// 40
+// disp method
+// 10
+// 20
+// 30
+// 40
+
+===================================================================================
