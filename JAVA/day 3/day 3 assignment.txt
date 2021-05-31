@@ -139,3 +139,257 @@ class checkDemo{
 // 40
 
 ===================================================================================
+4)	Show the example of single level inheritance with constructor invocation.
+
+package inheritance;
+class parent{
+	parent()
+	{
+		System.out.println("parent constructor invoked");
+	}
+	
+		int num1=9;
+	
+	void pmethod() {
+		System.out.println("parent class ");
+	}
+}
+class child extends parent{
+	child()
+	{
+		System.out.println("child constructor invoked");
+	}
+	void cmethod() {
+		System.out.println("child class ");
+	}
+}
+public class single {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child s1 =new child();
+		s1.cmethod();
+		s1.pmethod();
+	}
+
+}
+output:
+
+parent constructor invoked
+child constructor invoked
+child class 
+parent class 
+=================================================================================
+
+5)	Show the example of multi-level inheritance with constructor invocation.
+
+class grandParent{
+	grandParent()
+	{
+		System.out.println("grandparent constructor invoked");
+	}
+	
+		int num1=9;
+	
+	void GPmethod() {
+		System.out.println("grand parent class ");
+	}
+}
+class parent extends grandParent{
+	parent()
+	{
+		System.out.println("parent constructor invoked");
+	}
+	
+		int num1=9;
+	
+	void pmethod() {
+		System.out.println("parent class ");
+	}
+}
+class child extends parent{
+	child()
+	{
+		System.out.println("child constructor invoked");
+	}
+	void cmethod() {
+		System.out.println("child class ");
+	}
+}
+public class multi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child s1 =new child();
+		s1.cmethod();
+		s1.pmethod();
+		s1.GPmethod();
+	
+
+	}
+
+}
+============================================================================
+6)	Show the example of hierarchical inheritance with constructor invocation.
+package oops;
+class mobile{
+	mobile(){
+		System.out.println("mobile main class construcctor invoked");
+	}
+	void mobMethod() {
+		System.out.println("\"base class method invoked");
+		
+	}
+}
+
+class samsung extends mobile{
+	samsung(){
+		System.out.println("samsumg logo");
+	}
+	void samsungMethod() {
+		System.out.println("samsung features");
+	}
+}
+
+class apple extends mobile{
+	apple(){
+		System.out.println("apple logo");
+	}
+	void appleMethod() {
+		System.out.println("apple features");
+	}
+}
+public class hierarchy {
+
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		apple s1 =new apple();
+		samsung s2 = new samsung();
+		s1.appleMethod();
+		s2.samsungMethod();
+	}
+
+}
+
+output:
+apple logo
+mobile main class constriuctor invoked
+samsumg logo
+apple features
+samsung features
+===========================================================================================
+7)	Define a parent and a child class . Now explain function overriding with Example.
+package oops;
+class base{
+	void display() { 
+		System.out.println("overridden method also known as parent method");
+	}
+}
+class subClass extends base{
+	void display() {
+		System.out.println("ocerridding method ....child's class method");
+	}
+}
+public class override {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		base s1 = new subClass();
+		s1.display();
+
+	}
+
+}
+
+output:
+ocerridding method ....child's class method
+
+
+
+=================================================================================
+
+8)	Define a parnt class with one fuenction. Define child class with the function having same name as of parent class function, but having different argument.
+Create an instance of child class and call the functions. Make sure u have followed the concept of “function overloading “ in inheritance.
+
+package oops;
+class parent{
+	void display() {
+		System.out.println("parent class");
+	}
+	
+}
+
+class child extends parent{
+	int num;
+	void display(int k) {
+		num=k;
+		System.out.println(num);
+	}
+	
+}
+public class inheritance_overloading {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child s1 = new child();
+		s1.display();
+		s1.display(5);
+	}
+
+}
+
+output:
+parent class
+5
+===========================================================================
+9)	Define a class “Shape” with “draw()” function . Now derive  classes 
+like “Circle”, “Polygon”,”Rectangle” etc. from “Shape” and override “draw()” function. 
+Define a class “ShapeDemo” in which  write  main()  function. In the main function 
+create a reference to Shape class referring to any of the sub class.
+ Using this reference, call “draw()” and check the result.
+----------------------
+package oops;
+class shape{
+	void draw() {
+		System.out.println("shpae class");
+		
+	}
+}
+
+class circle extends shape{
+	void draw() {
+		System.out.println("shpae circle");
+	}
+}
+
+class rectangle extends shape{
+	void draw() {
+		System.out.println("shpae rectangle");
+	}
+}
+
+class polygon extends shape{
+	void draw() {
+		System.out.println("shpae polygon");
+	}
+}
+public class shapeDemo {
+	
+	static void perform(shape ref) {
+		ref.draw();
+	}
+	
+	public static void main(String[] args) {
+		perform(new circle());
+		perform(new rectangle());
+		perform(new polygon());
+
+	}
+}
+
+output:
+shpae circle
+shpae rectangle
+shpae polygon
