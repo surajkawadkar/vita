@@ -1,3 +1,11 @@
+1.
+accept marks from user. if marks are
+	> 75  display "Distinction"
+	> =60 and < =75 display "first class"
+	> =45 and < 60 display "second class"
+	>=35 and < 45 display "pass class"
+	<35 display "fail"
+----------------------------------------------------------------
 package logicalQ;
 import java.util.Scanner; 
 
@@ -42,3 +50,214 @@ output:
 Enter the marks
 85
 Distinction
+
+===========================================================================================
+2) accept a number and display whether it is divisible by 7 or not.
+
+------------------------------------------
+package logicalQ;
+import java.util.Scanner;
+public class divisible {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		System.out.println("Enter the number");
+		Scanner sc = new Scanner(System.in);
+		num=sc.nextInt();
+		if (num%7==0) {
+			System.out.println("divisibe by 7");
+		}
+		else {
+			System.out.println("not divisible by 7");
+		}
+	}
+
+}
+
+output:
+Enter the number
+65
+not divisible by 7
+========================================================================================================
+3) accept a character and display (using if.. else ) whether it is vowel or not.
+package logicalQ;
+import java.util.Scanner;
+public class checkVowel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char ch;
+		System.out.println("ehter the chaaracter");
+		Scanner sc =new Scanner(System.in);
+		ch =sc.nextLine().charAt(0);
+		if (ch=='u'||ch=='o'||ch=='i'||ch=='e'||ch=='a') {
+			System.out.println("Vowel");
+		}
+		else {
+			System.out.println("consonant");
+		}
+	}
+
+}
+output:
+ehter the chaaracter
+e
+Vowel
+==============================================================================================
+4) accept 2 numbers and a character as operator ( + , - ,* , / , % ). Perform arithmetic according to the character entered.
+
+package logicalQ;
+import java.util.Scanner;
+public class arithmatic {
+
+	public static void main(String[] args) {
+		char ch;
+		double ans ;
+		int  num1 ,num2;
+		// TODO Auto-generated method stub
+		Scanner sc =new Scanner(System.in);
+		
+		 System.out.println("enter the operator to be performerd");
+		 ch = sc.nextLine().charAt(0);
+		 System.out.println("enter 2 numbers");
+		 num1 = sc.nextInt();
+		 num2 = sc.nextInt();
+		 
+		 switch(ch) {
+		 case '+':{
+			ans= num1+num2;
+					System.out.println("addition is "+ans);
+					break;
+		 }
+		 case '-':{
+				ans= num1-num2;
+						System.out.println("subtraction is "+ans);
+						break;
+			 }
+		 case '*':{
+				ans= num1*num2;
+						System.out.println("multiplication is "+ans);
+						break;
+			 }
+		 case '%':{
+				ans= num1%num2;
+						System.out.println( "modulo is "+ans);
+						break;
+			 }
+		 case '/':{
+				ans= num1/(double)num2;
+						System.out.println("division is "+ans);
+						break;
+			 }
+		 default:
+			 System.out.println("invalid operator  please check your eyes ");
+			 
+		 
+		 }
+		
+		
+	}
+
+}
+output:
+enter the operator to be performerd
+/
+enter 2 numbers
+7 6
+division is 1.1666666666666667
+
+=======================================================================
+
+5) accept a number and display its table using 
+	while
+	do... while
+	for
+------------------------------------------------
+
+package logicalQ;
+import java.util.Scanner;
+public class doWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num, i=1;
+		Scanner sc = new Scanner(System.in);
+		num = sc.nextInt();
+		do {
+			System.out.println(num*i);
+			i+=1;
+		}
+		while(i<=10);
+	}
+
+}
+
+=======================================================================
+6) accept numbers and display as long as user does not enter 0.
+
+package logicalQ;
+import java.util.Scanner;
+public class userTerminate {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		Scanner sc =new Scanner(System.in);
+		num=sc.nextInt();
+		while(num!=0) {
+			num=sc.nextInt();
+			
+		}
+		System.out.println(num);
+	}
+
+}
+output:
+5
+8
+79
+7
+3
+55
+77
+66
+0
+0
+
+============================================================
+7) accept a number and display whether it is even , odd or zero.
+
+
+package logicalQ;
+import java.util.Scanner;
+
+class check{
+	void checkOddEven(int num) {
+		if(num%2==0) {
+			System.out.println("even number ");
+		}
+		else {
+			System.out.println(" odd number");
+		}
+	}
+}
+public class oddEven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number");
+		 num = sc.nextInt();
+		check s1 = new check();
+		s1.checkOddEven(num);
+
+	}
+
+}
+output:
+enter the number
+55
+ odd number
+==================================================================
