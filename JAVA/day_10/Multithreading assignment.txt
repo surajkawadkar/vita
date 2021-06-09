@@ -1,0 +1,182 @@
+1) create a multi-threaded application by using Thread pool.create 2 threads. each thread should display characters from A to J. [ make sure while one thread executes , other thread should not interfere ]
+ ----------
+package threading;
+
+class child extends Thread{
+	public void run() {
+		for(int i =1;i<=5;i++) {
+			System.out.println("child thread"+i);
+		}
+	}
+}
+public class myThread extends Thread{ //we can extends child class instead of Thread because child class extending thread 
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//myThread s1 = new myThread();
+		child s2= new child();
+		s2.start();
+		for(int i =1;i<=5;i++) {
+			System.out.println("main thread"+i);
+		}
+		
+		//s1.start();
+	}
+
+}
+-----
+output:
+main thread1
+main thread2
+main thread3
+main thread4
+child thread1
+child thread2
+main thread5
+child thread3
+child thread4
+child thread5
+===============================================================================
+2) create a multi-threaded application by using Thread pool.create 2 threads. each thread should display numbers from 1 to 10. [ make sure while one thread executes , other thread should not interfere ]
+Also when first thread displays nos. from 1 to 5 it should released the lock and allow other thread to display nos. from 1 to 5 and then previous thread will display nos. from 6 to 10 and so on.
+
+package threading;
+class A {
+	synchronized public void sync() throws Exception
+	{
+		for(int i=0;i<5;i++)
+		{	
+//			if(i==2) {
+//				wait(); 
+//				Thread.notify();
+//			}
+			System.out.println("synchonized "+i);
+		}
+	}
+}
+	
+
+public class twoThread implements Runnable{
+	 public void run()
+	{
+		for(int i=0;i<5;i++)
+		{	
+			System.out.println("thread "+i);
+		}
+	}
+
+
+	public static void main(String[] args) throws Exception
+	{ 
+		// TODO Auto-generated method stub
+		
+A s1 = new A();
+twoThread s2 = new twoThread();
+
+//Thread obj = new Thread(s1);
+Thread obj2 = new Thread(s2);
+s1.sync();
+
+
+obj2.start();
+
+	}
+
+}
+---
+output:
+synchonized 0
+synchonized 1
+synchonized 2
+synchonized 3
+synchonized 4
+thread 0
+thread 1
+thread 2
+thread 3
+thread 4
+=========================================================
+3) create a multi-threaded application by using Thread pool and ReentrantLock (explicit locking) .create 2 threads. each thread should display characters from A to J. [ make sure while one thread executes , other thread should not interfere ]
+
+package threading;
+class AB extends Thread{
+	char alph;
+	synchronized public void run() //throws Exception
+	{
+		for(char i=65;i<75;i++)
+		{	
+			alph=i;
+			System.out.println("synchonized "+alph);
+		}
+	}
+}
+	
+
+public class rantalLock extends Thread{
+	
+	 public void run()
+	{
+		 char alph;
+		for(char i=65;i<75;i++)
+		{	
+			alph=i;
+			System.out.println("thread "+ alph);
+		}
+	}
+
+
+	public static void main(String[] args) throws Exception
+	{ 
+		// TODO Auto-generated method stub
+		
+AB s1 = new AB();
+rantalLock s2 = new rantalLock();
+
+//Thread obj = new Thread(s1);
+//Thread obj2 = new Thread(s2);
+s1.start();
+
+
+s2.start();
+
+	}
+
+}
+
+---
+output:
+thread A
+thread B
+thread C
+thread D
+thread E
+thread F
+thread G
+thread H
+thread I
+thread J
+synchonized A
+synchonized B
+synchonized C
+synchonized D
+synchonized E
+synchonized F
+synchonized G
+synchonized H
+synchonized I
+synchonized J
+===============================
+4) create a multi-threaded application by using Thread pool and ReentrantLock.create 2 threads. each thread should display numbers from 1 to 10. [ make sure while one thread executes , other thread should not interfere ]
+Also when first thread displays nos. from 1 to 5 it should released the lock and allow other thread to display nos. from 1 to 5 and then previous thread will display nos. from 6 to 10 and so on.
+
+
+
+
+
+
+
+
+
+
+
+
