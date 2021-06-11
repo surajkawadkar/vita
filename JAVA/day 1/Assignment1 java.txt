@@ -1,0 +1,139 @@
+
+1)	display a table of a particular number
+public class table
+{
+    public static void main(String args[])
+    {
+        int i;
+        for (i=1;i<=10;i++){
+            System.out.println(i*2);
+        }
+    }
+}
+
+/*
+
+E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 1>javac table.java
+
+E:\Courses\VITA\VITA-PROGRAMS\JAVA\day 1>java table
+2
+4
+6
+8
+10
+12
+14
+16
+18
+
+
+=======================================================
+using switch ….case   display whether character is vowel or not.
+
+class checkvowel{
+    public static void main(String args[]){
+        char ch='c';
+
+        switch(ch){
+            case 'a':{
+                 System.out.println("vowel");
+            }
+            break;
+            case 'e':{
+                 System.out.println("vowel");
+            }
+            break;
+            case 'i':{
+                 System.out.println("vowel");
+            }
+            break;
+            case 'o':{
+                 System.out.println("vowel");
+            }
+            break;
+            case 'u':{
+                 System.out.println("vowel");
+            }
+            break;
+            default:{
+
+                 System.out.println("consonant");
+		}
+            
+        }
+    }
+}
+
+
+==================================================================
+Display numbers  1 to 10 using do…. While loop
+
+class dowhile{
+    public static void main(String args[]){
+        int i=1;
+        do
+        {System.out.println(i);
+       i++;}
+        while(i<=10);{
+             
+        }
+
+
+    }
+}
+
+
+=========================================================================
+Display numbers from 3 to 30 except number 24  using while loop.
+
+public class Except
+{
+   public static void main(String args[] )
+{
+         int num=3;
+ while(num<=30)
+{ 
+    if(num==24)
+{
+continue;
+}
+System.out.print(num);
+num++;
+}
+}
+}
+
+
+
+=================================================================================
+Using if…….else if….  Else,  display whether result is  fail, pass, second class , first class, Distinction etc.
+
+
+public class If_Class
+{
+	public static void main(String[] args)
+	{
+		int a=20;
+		if(a>=80)
+		{
+			System.out.println("it's distinction");
+		}
+		else if(a>=60)
+		{
+			System.out.println("it's first class");
+		}
+                else if(a>=40)
+		{
+			System.out.println("it's second class");
+		}
+                else if(a>=30)
+		{
+			System.out.println("it's pass");
+		}
+
+		else
+		{
+			System.out.println("it's fail");
+		}
+	}
+}
