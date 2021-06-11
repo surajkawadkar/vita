@@ -15,3 +15,4 @@ print(a,b)
 import  math
 ceiling=math.ceil(25.2)
 print(ceiling)
+print(math.cos(90))
