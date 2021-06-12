@@ -11,13 +11,17 @@
 #     print(num3)
 
 # grades of a student
-perc=float(input())
-if perc>60:
-    print("first class")
-elif perc>=50:
-    print("second class")
-elif perc>=40:
-    print("pass")
-else:
-    print("fail")
+# perc=float(input())
+# if perc>60:
+#     print("first class")
+# elif perc>=50:
+#     print("second class")
+# elif perc>=40:
+#     print("pass")
+# else:
+#     print("fail")
 
+for i in range(1,10,1):
+    if i==3:
+        continue
+    print(i)
