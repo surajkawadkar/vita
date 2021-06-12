@@ -1,3 +1,8 @@
-words=input("Enter the words")
-for i in word:
-    print()
+num=input("Enter the words")
+if num%2==0:
+    print("Even")
+else:
+    print('Odd')
+
+
+
