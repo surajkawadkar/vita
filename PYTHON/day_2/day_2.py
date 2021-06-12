@@ -50,11 +50,32 @@
 #     fact*=i
 # print(fact)
 
-num= int(input())
-sum=0
-while(num>0):
-    rem=num%10
-    sum+=rem
-    num=num//10
-print(sum)
+# for i in range(1,1000):
+        
+#     sum=0
+#     tnum=i
+#     while(i>0):
+#         rem=i%10
+#         num=num//10
+#         sum+=r
+        
+#     print(len(tnum))
+#     print(sum)
+
+# num=int(input())
+# if num==(num[::-1]):
+#     print("palimdrome")
+
+
+# infosys question
+# i/p 2,5-->2,3,4,5
+# 5,2-->5,4,3,2
+# start= int(input())
+# end=int(input())
+# if start<end:
+#     for i in range(start,end+1):
+#         print(i,end=',')
+# else:
+#     for j in range(start,end-1,-1):
+#         print(j,end=',')
 
