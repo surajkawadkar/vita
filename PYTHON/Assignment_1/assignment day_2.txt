@@ -1,0 +1,411 @@
+1.	Write a python program to solve the quadratic equation, ax2 + bx + python – 0. Consider all possibilities of input data.
+import math
+a=int(input("enter x^2 term"))
+b= int(input("enter bx term"))
+c=int(input("neter conmstant term"))
+print("expression is",a,'x^2'+'+',b,'x +',c)
+nume=(b*b-4*a*c)
+den= (2*a)
+print(nume)
+print(den)
+
+
+r1=-b+(math.sqrt(nume/den))
+r2=-b-((math.sqrt(nume/den)))
+print(r1)
+print(r2)
+
+#########################################################
+2.Suppose rs.5,000/- is deposited each year in an account which yields 10% interest compounded annually. Write a program which prints the amount in the account at the 
+End of each year for 10 years.
+
+deposit=5000
+total=0.0
+for year in range(1,11):
+    temp=0
+    temp=deposit+(deposit*10*year)/100
+    total+=temp
+print(total)
+################################################################
+3.	Write a python program to display (even) or [odd] words for the input of integer number using python library functions. Draw the flowchart also.						
+num=input("Enter the words")
+if num%2==0:
+    print("Even")
+else:
+    print('Odd')
+
+###############################################################
+4.	Write a python program, which will read two unequal integer numbers and shall print out both the numbers at the output in descending order.
+num1= int(input("eneer first number"))
+num2= int(input("eneer second number"))
+if num1<num2:
+    print("assending order is",num1,num2)
+else:
+    print("assending order is",num2,num1)
+###############################################################
+5.	Write a python program, which will read three unequal numbers and shall output the largest of the three.
+num1=int(input("Enter 1st number"))
+num2=int(input("Enter 2st number"))
+num3=int(input("Enter 3st number"))
+if(num1>num2 and num1>num3):
+    print(num1," is the largest")
+elif (num2>num1 and num2>num3):
+    print(num2,'is the largest number')
+else:
+     print(num3,'is the largest number')
+
+#############################################################
+6.	Write a python program, which will read three unequal integers and shall output all the three integers in decreasing order.
+num1= int(input("enter first number"))
+num2= int(input("enter second number"))
+num3= int(input("enter third number"))
+condition1=num3>num2>num1
+condition2=num3>num1>num2
+condition3=num2>num1>num3
+condition4=num2>num3>num1
+condition5=num1>num3>num2
+if condition1:
+    print("descending  order is",num3,num2,num1)
+elif condition2:
+    print("descending order is",num3,num1,num2)
+elif condition3:
+    print("descending order is",num2,num1,num3)
+elif condition4:
+    print("descending order is",num2,num3,num1)
+elif condition5:
+    print("descending order is",num1,num3,num2)
+
+else:
+    print("descending order is",num1,num2,num3)
+
+
+############################################################
+7.	Develop a program to accept a year as input and printout if it is a leap year or not. A year is a leap year 
+if it is divisible by 4 and centennial years (years divisible by 100 are leap years only when they are also divisible by 400.)
+
+year= int(input("enter the year"))
+if year%4==0 and year%100!=0 or year%400==0:
+    print("leap year")
+else:
+    print('ordionary leap')
+
+
+
+
+
+############################################################
+8.	Write a program in python to display month in words (month number is input).
+month=int(input("Enter the month in number"))
+if month==1:
+    print("January")
+elif month==2:
+    print("February")
+elif month==3:
+    print("March")
+elif month==4:
+    print("April")
+
+elif month==5:
+    print("May")
+elif month==6:
+    print("June")
+elif month==7:
+    print("July")
+elif month==8:
+    print("August")
+
+elif month==9:
+    print("September")
+elif month==10:
+    print("October")
+elif month==11:
+    print("November")
+elif month==12:
+    print("December")
+
+else:
+    print("Invalid")
+
+output:
+
+Enter the month in number12
+Decempber
+
+################################################
+9.	Write the menu driven program in ‘c’ language to perform the trignometric functional calculator for the following functions. 
+S – sin (x)			c – cos (x)
+T – tan (x)			x – quit
+
+#python does not support switch case
+import math
+print('''S – sin (x)	    		C – cos (x)
+T – tan (x)		         	X – quit''')
+choice=input("enter alphabet correspond to operation: ")
+if choice=='S':
+    x=float(input("enter the number: "))
+    print(math.sin(x))
+elif choice=='C':
+    x=float(input("enter the number: "))
+    print(math.cos(x))
+elif choice=='T':
+    x=float(input("enter the number: "))
+    print(math.tan(x))
+elif choice=='X':
+    exit
+else:
+    print("Invalid choice.... kindly enter correct Alphabet")
+###############################################################
+10.	A company manufactures three products, music systems, television sets and refrigerators. The following codes are used to indicate them.
+
+Product	Code
+Music system	1
+Television set	2
+Refrigerator	3
+
+   the company has a discount poly as follows :
+Product	Order amount	Discount rate
+Music system	Rs.15,000 or more	12%
+	Rs.8,000 or more	8%
+	Less than rs.8,000	2%
+Television set	Rs.70,000 or more	11%
+	Rs.40,000 or more	6%
+Refrigerator	Rs.50,000 or more	10%
+	Rs.30,000 or more	5%
+For a given product. Use appropriate control structure. using this policy, write a program to calculate the discount amount on an order amount
+
+----
+print('''   Product \t	Code \n
+Music system	\t 1
+Television set	\t 2
+Refrigerator	\t 3
+''')
+choice=int(input("enter respective code whch you wish to buy "))
+if choice==1:
+    order=float(input("amount to be paid for Music system"))
+    if order>15000:
+        discount=(order*12)/100
+        print("Discount is ",discount)
+    elif order>8000:
+        discount=(order*8)/100
+        print("Discount is ",discount)
+    else:
+        discount=(order*2)/100
+        print("Discount is ",discount)
+
+
+
+elif choice==2:
+    order=float(input("amount to be paid for TV"))
+    if order>70000:
+        discount=(order*11)/100
+        print("Discount is ",discount)
+    else:
+        discount=(order*6)/100
+        print("Discount is ",discount)
+    
+elif choice==3:
+    order=float(input("amount to be paid for Refrigerator"))
+    if order>50000:
+        discount=(order*10)/100
+        print("Discount is ",discount)
+
+    else:
+        discount=(order*5)/100
+        print("Discount is ",discount)
+
+else:
+    print("Invalid")
+##################################################################################
+11.	Write a python program, which will print will first 100 natural numbers.
+for i in range(1,101):
+	print(i)
+################################################################################
+12.	Write a program for summation of all the natural numbers up to and including the given integer.
+
+
+num= int(input())
+sum=0
+for i in range(1,num+1):
+    sum+=i
+print(sum)
+#############################################################################
+
+13.	Write a program which reads and multiplies together 20 real numbers.
+ (floating point numbers).	
+
+total=0.0
+for i in range(20):
+	x=float(input("enter number to multiply"))
+	total*=x
+print(total)
+#####################################################################################
+14.	Write a python program, which will print in a tabular from all the alphabets,
+ capital as well as lower case letters with their ascii values.
+for i in range(65,123):
+    if i<97 and i>90:
+        continue
+    else:
+
+        print(i,"\t",chr(i))
+#####################################################################################
+15.	Write a program to read marks of 100 students and find all print the number of students passed in first class. 
+The marks are out of 100 and to get first class one has to obtain minimum 60 marks.
+
+for i in range(1,101):
+    marks= int(input("enter the marks"))
+    if marks>60:
+        print("first class")
+15b. Write a program, which will find and print sum of first 100 odd numbers.
+
+
+num=0
+count=0
+while(count<=100):
+    if num%2==1:
+        count+=1
+        print(num,end=',')
+        num+=1
+    else:
+        num+=1
+
+####################################################################
+16.	Given a number, write a python program using while lop to reverse the digits of the number
+
+rev_d=0
+num= int(input())
+while(num>0):
+    last_d=num%10
+    rev_d=rev_d*10+last_d
+    num=num//10
+print(rev_d)
+
+###############################################################################
+18.	Modify the above python program to separate the individual digits of the four-digit number and display. Also get the sum of the separated digits of same four-digit number.
+Input no.	1234				output 	4321
+Separated digits 1, 2, 3, 4,		sum = 1+2+3+4 = 10
+
+
+rev_d=0
+sum=0
+num= int(input())
+while(num>0):
+    last_d=num%10
+    sum+=last_d
+    rev_d=rev_d*10+last_d
+    num=num//10
+print(rev_d)
+print(sum)
+
+
+
+#########################################################
+19.	Write a python program, which will read a positive integer number and shall print out whether it’s an armstrong number.
+ An armstrong number is one the sum of cubes of whose digits equal the number itself (e.g. 13+53+33=153).
+
+num= int(input())
+sum=0
+while(num>0):
+    power=len(str(num))
+    temp_num=num
+    last_digit=num%10
+    sum=last_digit**power
+    num=num//10
+if temp_num==sum:
+    print("armstrong number")
+else:
+    print("Not an armstrogn number")
+
+
+
+#######################################################################################
+20.	Write a program which finds four digit perfect squares, where the number represented by 		
+e.g. 1681 = 412	16=42		81=92	
+import math
+num= int(input())
+print(math.sqrt(num))
+
+#######################################################################################
+21.	Write a python program to calculate y where y=x^n where y, x are real and n is natural no.
+
+num1,num2= map(float,input("real then natural").split())
+print(num1**num2)
+#######################################################################################
+22.	Write a program to print a “4 times table” in the following form:				 
+i.	1  4 = 4
+ii.	2  4 = 8
+iii.	3  4 = 12
+iv.	4  4 = 16	……… etc.
+
+
+num= int(input())
+for i in range(1,5):
+    print(i*num)
+
+
+
+#######################################################################################
+23.	Write a python program, which will read an integer and shall print out multiplication table of that integer.
+
+num= int(input())
+for i in range(1,11):
+    print(i*num)
+
+
+#######################################################################################
+24.	Write a program in python to calculate factorial of given number.	
+
+fact=1
+num=int(input())
+for i in range(1,num+1):
+     fact*=i
+print(fact)
+
+#######################################################################################
+25.	Write a menu driven program to perform arithmetic functions. 1 for addition, 2 for subtraction, 3 for multiplication, 4 to exit, 
+
+program will quit only if the option is 4 else it reads option and calls respective function.
+
+-------
+print('''1- Additon
+2--Subtraction
+3--multip;ication
+4--exit''')
+choice=int(input("enter the number corresponds to operation: "))
+if choice==1:
+    a,b=map(float,(input("enter the numbers: ")).split())
+    print(a+b)
+elif choice==2:
+    a,b=map(float,(input("enter the numbers: ")).split())
+    print(a-b)
+elif choice==3:
+
+    a,b=map(float,(input("enter the numbers: ")).split())
+    print(a*b)
+elif choice==4:
+    exit
+else:
+    print("Invalid choice.... kindly enter correct number")
+
+
+###########################################################################
+26.	Write a program that reads numbers until a negative number is read, and prints
+i)	Number of values read,
+ii)	The largest value and
+iii)	The smallest value	
+
+small,large=100,0
+while(True):
+    num= int(input("enter the number"))
+    if num<0:
+        break
+    else:
+        if large<num:
+            large=num
+        elif small>num:
+            small=num
+print(small,"small")
+print(large,"large")
+
+#####################################################################
+
+
