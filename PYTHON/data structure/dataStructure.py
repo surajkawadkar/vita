@@ -20,17 +20,32 @@
 
 # print number till user enter blank  and then show those which are above average 
 #import numpy as np
+# list1=[]
+# while(True):
+#     num=input()
+#     if num=='':
+#         break
+#     else:
+#         list1.append(float(num))
+# print(list1)
+
+# average=sum(list1)/len(list1) #average=np.mean(list1) 
+# print(average)
+# for i in list1:
+#     if i>average:
+#         print(i)
+
+# add infinite elemebt in list and show ooccurances of that elenemebt in list
 list1=[]
-while(True):
+while(1):
     num=input()
     if num=='':
         break
     else:
-        list1.append(float(num))
-print(list1)
+        list1.append(int(num))
 
-average=sum(list1)/len(list1) #average=np.mean(list1) 
-print(average)
-for i in list1:
-    if i>average:
-        print(i)
+unique=set(list1)
+# newList=list(unique)
+for i in unique:
+    if i in list1:
+        print(i,"i",list1.count(i))
