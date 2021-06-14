@@ -17,7 +17,7 @@
 # # print(ans)
 
 
-###########################################################
+
 # print number till user enter blank  and then show those which are above average 
 #import numpy as np
 list1=[]
@@ -29,7 +29,7 @@ while(True):
         list1.append(float(num))
 print(list1)
 
- average=sum(list1)/len(list1) #average=np.mean(list1) 
+average=sum(list1)/len(list1) #average=np.mean(list1) 
 print(average)
 for i in list1:
     if i>average:
