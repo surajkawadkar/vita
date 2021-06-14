@@ -36,16 +36,29 @@
 #         print(i)
 
 # add infinite elemebt in list and show ooccurances of that elenemebt in list
-list1=[]
-while(1):
-    num=input()
-    if num=='':
-        break
-    else:
-        list1.append(int(num))
+# list1=[]
+# while(1):
+#     num=input()
+#     if num=='':
+#         break
+#     else:
+#         list1.append(int(num))
 
-unique=set(list1)
-# newList=list(unique)
-for i in unique:
-    if i in list1:
-        print(i,"i",list1.count(i))
+# unique=set(list1)
+# # newList=list(unique)
+# for i in unique:
+#     if i in list1:
+#         print(i,"i",list1.count(i))
+dictionary={0:'zero',
+1:'one',
+2:'two',
+3:'three',
+4:'four',
+5:'five',
+6:'six',
+7:'seven',
+8:'eight',
+9:'nine'}
+num= input()
+for i in num:
+    print(dictionary[int(i)])
