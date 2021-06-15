@@ -41,19 +41,22 @@
 
 
 # palindrome word
-# list1=[]
-# name='suraj good a good suraj'
-# for i in range(len(name):0:-1):
-#     if name[i]==' ':
-        # list1.append(name[i:])
+list1=[]
+name='suraj good a good suraj'
+namelist=name.split(' ')
+revlist=namelist.reverse()
+if namelist==namelist:
+    print('palindrome line')
+else:
+    print("ordiornary")
 
-line=input()
+# line=input()
 
-total = list(line.split(' '))
-print(len(total))
-unique =set(total)
-print("uniq words",len(unique))
-for i in unique:
-    print(i,'---->',total.count(i))
+# total = list(line.split(' '))
+# print(len(total))
+# unique =set(total)
+# print("uniq words",len(unique))
+# for i in unique:
+#     print(i,'---->',total.count(i))
 
 
