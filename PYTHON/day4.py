@@ -29,26 +29,31 @@
 # l=[ord(i) for i in 'suraj']
 # print(l)
 
-# incomplete
-# str1=''
+
+#  print here amar hi
+
 # line='hi amar here'
-# wordlist=line.strip()
+# wordlist=line.split()
 # wordlist=wordlist[::-1]
 # str1=''
 # for i in wordlist:
-#     str1=str1+i
-# print(str1)
+#     if i==' ':
+#         continue
+#     else:
+#         str1=str1+i
+#         print(str1)
+#         str1=''
 
 
 # palindrome word
-list1=[]
-name='suraj good a good suraj'
-namelist=name.split(' ')
-revlist=namelist.reverse()
-if namelist==namelist:
-    print('palindrome line')
-else:
-    print("ordiornary")
+# list1=[]
+# name='suraj good a good suraj'
+# namelist=name.split(' ')
+# revlist=namelist.reverse()
+# if namelist==namelist:
+#     print('palindrome line')
+# else:
+#     print("ordiornary")
 
 # line=input()
 
