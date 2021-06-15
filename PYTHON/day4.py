@@ -20,9 +20,40 @@
 # for i in range(0,len(name)+1):
 #     print(name[:i+1])
 # mirror incoplete
-name='suraj'
-for i in range(1,len(name)+1,-1):
-    print(' '*i+name[:i])
+# name='suraj'
+# for i in range(1,len(name)+1,-1):
+#     print(' '*i+name[:i])
 
-for i in 'suraj':
-    print('i-->',ord(i))
+# for i in 'suraj':
+#     print('i-->',ord(i))
+# l=[ord(i) for i in 'suraj']
+# print(l)
+
+# incomplete
+# str1=''
+# line='hi amar here'
+# wordlist=line.strip()
+# wordlist=wordlist[::-1]
+# str1=''
+# for i in wordlist:
+#     str1=str1+i
+# print(str1)
+
+
+# palindrome word
+# list1=[]
+# name='suraj good a good suraj'
+# for i in range(len(name):0:-1):
+#     if name[i]==' ':
+        # list1.append(name[i:])
+
+line=input()
+
+total = list(line.split(' '))
+print(len(total))
+unique =set(total)
+print("uniq words",len(unique))
+for i in unique:
+    print(i,'---->',total.count(i))
+
+
