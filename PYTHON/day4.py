@@ -16,6 +16,13 @@
 #     print(' '*(6-i),' x'*i)
 
 # word pyramid
+# name='suraj'
+# for i in range(0,len(name)+1):
+#     print(name[:i+1])
+# mirror incoplete
 name='suraj'
-for i in range(0,len(name)+1):
-    print(name[:i+1])
+for i in range(1,len(name)+1,-1):
+    print(' '*i+name[:i])
+
+for i in 'suraj':
+    print('i-->',ord(i))
