@@ -1,3 +1,6 @@
 # 2. Write a Python program to get the Python version you are using. 
-import sys
-print(sys.version)
+# import sys
+# print(sys.version)
+
+import datetime
+print(datetime.datetime.now())
