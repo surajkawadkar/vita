@@ -62,8 +62,16 @@
 # 9. Write a Python program to display the examination schedule. (extract the date from exam_st_date). 
 # exam_st_date = (11, 12, 2014)
 # Sample Output : The examination will start from : 11 / 12 / 2014
-op=''
-exam_st_date = (11, 12, 2014)
-for i in exam_st_date:
-    op=op+'/'+str(i)
-print(op[1:])
+
+# op=''
+# exam_st_date = (11, 12, 2014)
+# for i in exam_st_date:
+#     op=op+'/'+str(i)
+# print(op[1:])
+
+# 10. Write a Python program that accepts an integer (n) and computes the value of n+nn+nnn. 
+# def addition(a):
+#     sum
+#     return a+a*a+a*a*a
+# num= int(input())
+# print(addition(num))
