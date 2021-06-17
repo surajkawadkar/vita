@@ -42,7 +42,7 @@
 
 
 
-#  Arrange String characters such that lowercase letters should come first 
+# 3 Arrange String characters such that lowercase letters should come first 
 # Given input String of combination of the lower and upper case arrange characters in such a way that all lowercase letters should come first. 
 # Expected Output: 
 # input_String = PyNaTive 
@@ -50,3 +50,59 @@
 # aeiNPTvy 
 # arranging characters giving precedence to lowercase letters: 
 # yaivePNT 
+
+# s1='PyNaTive'
+# s2=''
+# list1=list(s1)
+# list1.sort()
+# for i in list1:
+#     if i.islower():
+#         s2=i+s2
+#     else:
+#         s2=s2+i
+# print(s2)
+
+# 4. Given a string, return the sum and average of the digits that appear in the string, ignoring all other characters 
+# For Example: – 
+# sumAndAverage("English = 78 Science = 83 Math = 68 History = 65") = sum 294 Percentage is 73.5 Solution: 
+
+
+# def sumAndAverage(e,s,m,h):
+#     print('sum ',e+s+m+h)
+#     print('avg ',(e+s+m+h)/4)
+# English = 78; Science = 83; Math = 68; History = 65
+# sumAndAverage(English,Science,Math,History)
+
+
+
+
+
+
+
+
+
+
+
+
+# 5. Given a two list. Create a third list by picking an odd-index element from the first list and even index elements from second. 
+# For Example: 
+# listOne = [3, 6, 9, 12, 15, 18, 21] 
+# listTwo = [4, 8, 12, 16, 20, 24, 28] 
+# Expected Output: 
+# Element at odd-index positions from list one 
+# [6, 12, 18] 
+# Element at even-index positions from list two 
+# [4, 12, 20, 28] 
+# Printing Final third list 
+# [6, 12, 18, 4, 12, 20, 28]
+
+# even=[]
+# odd=[]
+# listOne = [3, 6, 9, 12, 15, 18, 21] 
+# listTwo = [4, 8, 12, 16, 20, 24, 28] 
+# for i in range(1,len(listOne),2):
+#     odd.append(listOne[i])   
+
+# for i in range(0,len(listTwo),2):
+#     even.append(listTwo[i])   
+# print(odd+even)
