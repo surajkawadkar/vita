@@ -33,11 +33,21 @@
 # Output :
 # List : ['3', ' 5', ' 7', ' 23']
 # Tuple : ('3', ' 5', ' 7', ' 23')
-list1=[]
-while True:
-    data= input('enter the number')
-    if data=='':
-        break
-    list1.append(data)
-print(list1)
-print(tuple(list1))
+# --
+# list1=[]
+# while True:
+#     data= input('enter the number')
+#     if data=='':
+#         break
+#     list1.append(data)
+# print(list1)
+# print(tuple(list1))
+
+# 7. Write a Python program to accept a filename from the user and print the extension of that. 
+# Sample filename : abc.java
+# Output : java
+
+filename=input()
+for i in range(len(filename)):
+    if filename[i]=='.':
+        print(filename[i+1:])
