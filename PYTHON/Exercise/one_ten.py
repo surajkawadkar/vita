@@ -56,5 +56,14 @@
 # 8. Write a Python program to display the first and last colors from the following list. 
 # color_list = ["Red","Green","White" ,"Black"]
 
-color_list = ["Red","Green","White" ,"Black"]
-print(color_list[0],'and',color_list[-1])
+# color_list = ["Red","Green","White" ,"Black"]
+# print(color_list[0],'and',color_list[-1])
+
+# 9. Write a Python program to display the examination schedule. (extract the date from exam_st_date). 
+# exam_st_date = (11, 12, 2014)
+# Sample Output : The examination will start from : 11 / 12 / 2014
+op=''
+exam_st_date = (11, 12, 2014)
+for i in exam_st_date:
+    op=op+'/'+str(i)
+print(op[1:])
