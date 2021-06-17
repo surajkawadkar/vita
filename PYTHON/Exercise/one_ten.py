@@ -2,5 +2,11 @@
 # import sys
 # print(sys.version)
 
-import datetime
-print(datetime.datetime.now())
+
+# 3. Write a Python program to display the current date and time.
+# import datetime
+# print(datetime.datetime.now())
+
+
+r= int(input())
+print(2*3.14*r*r)
