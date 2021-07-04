@@ -12,3 +12,15 @@ To Use this code follow the instuction:
 VS CODE
 to make duplicate of current line in next line -->shift + alt + down
 to make duplicate of current line in above line -->shift + alt + up
+
+<!-- Virtual environment -->
+
+venv is an built-in package which heps coder to proide isolated room where packages and modules are valid
+
+<!-- virtual environment ends -->
+
+JUpyter
+C:\Users\abc\AppData\Local\Programs\Python\Python37-32\Scripts> pip install jupyter
+
+###################################
+https://cs231n.github.io/python-numpy-tutorial/#numpy
