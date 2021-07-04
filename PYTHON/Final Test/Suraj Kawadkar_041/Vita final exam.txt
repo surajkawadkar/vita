@@ -1,0 +1,104 @@
+Comments ######################### 
+Author:  Suraj kawadkar
+Date of creation:22/06/2021 
+Topic: Python Final Test
+Language Used: Python
+######################### 
+
+Q1
+
+file = open("vita.txt", "r")
+number_of_lines = 0
+number_of_words = 0
+unique=0
+for line in file:
+  words = line.split()
+  number_of_lines += 1
+  number_of_words += len(words)
+  
+file.close()
+print("lines:", number_of_lines, "words:", number_of_words)
+
+Q2
+
+--------
+test_list1 = [54, 35, 86, 91, 101]
+test_list2 = [33, 44, 6, 4, 1]
+  
+size_1 = len(test_list1)
+size_2 = len(test_list2)
+  
+res = []
+i, j = 0, 0
+  
+while i < size_1 and j < size_2:
+    if test_list1[i] < test_list2[j]:
+      res.append(test_list1[i])
+      i += 1
+  
+    else:
+      res.append(test_list2[j])
+      j += 1
+  
+res = res + test_list1[i:] + test_list2[j:]
+  
+print ("sorted list using mergesort is : " + str(res))
+
+------------------------------------------
+Q3
+def summrize(*n):
+    sums = 0
+  
+    for t in n:
+        sums = sums + t
+  
+    avg = sums / len(n)
+    return f"{avg},{sums}"
+      
+ 
+result1 = summrize(40, 60, 50)
+
+  
+ 
+print(str(result1))
+-------------------------
+Q4
+
+class customException(Exception):
+    def __init__(self,code):
+        self.code=code
+    def __str__(self):
+        if self.code==101:
+            return "find not found:"+str(self.code)
+        elif self.code==102:
+            return "wrong  mode:"+str(self.code)
+        elif self.code==103:
+            return "Unknown Error:"+str(self.code)
+        else:
+            return "Out of error"+str(self.code)
+
+try:
+    raise customException(101)
+except customException as arg:
+    print("Error:",arg)
+
+
+
+===========================
+Q5
+
+def TotalTax(amt,tax):
+    tax1=amt*(tax/100)
+    total=amt+tax1
+    return total
+
+    
+def Gst(total,gst):
+    gst1=total*(gst/100)
+    total1=total+gst1
+
+    return total1
+    
+    
+    
+print(Gst(TotalTax(1000,8),5))
