@@ -83,7 +83,6 @@
 
 
 
-
 # 5. Given a two list. Create a third list by picking an odd-index element from the first list and even index elements from second. 
 # For Example: 
 # listOne = [3, 6, 9, 12, 15, 18, 21] 
