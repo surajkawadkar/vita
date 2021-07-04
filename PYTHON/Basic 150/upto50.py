@@ -1,5 +1,25 @@
-#  Write a Python program to count the number 4 in a given list
+# s=input()
+# print(s[::-1])
 
-list1=[1,2,3,4,5,6,7,8,6,5,4,4,3,2,4]
-print(list1.count(4))
-# ############################
+###################################
+
+# we can print a string in modified way in one line using 4 ways including loop
+#######################################
+
+#####
+# " * " symbol
+s='suraj'
+num=[1,2,3,4]  #
+print(*s,sep=',')
+# print(*num,sep=',')   doesnt work for int join only join string
+
+print("by using join function")
+print(','.join(s))
+# print(','.join(num))  join only join the string
+
+print("using map function")
+print(','.join(map(str,s)))
+print(','.join(map(str,num)))
+
+
+str1=input().split()
