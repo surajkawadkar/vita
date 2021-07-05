@@ -30,3 +30,5 @@ For machine learning create new environment in MACHINE LEARNING DIRECTORY
 create cmd commad>py -m venv vita_ml_env
 
 activate cmd commad > cd\via_ml_env\Scripts\activate
+
+For jupyter run commad from scrits -->jupyter notebook
