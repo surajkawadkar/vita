@@ -24,3 +24,9 @@ C:\Users\abc\AppData\Local\Programs\Python\Python37-32\Scripts> pip install jupy
 
 ###################################
 https://cs231n.github.io/python-numpy-tutorial/#numpy
+
+################
+For machine learning create new environment in MACHINE LEARNING DIRECTORY
+create cmd commad>py -m venv vita_ml_env
+
+activate cmd commad > cd\via_ml_env\Scripts\activate
