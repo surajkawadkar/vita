@@ -1,5 +1,6 @@
 *.class
 *.pdf
 *.docx
-*.csv
+
 vita_ml_env
+parag_K-FOLD.ipynb
