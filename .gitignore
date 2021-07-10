@@ -1,6 +1,6 @@
 *.class
 *.pdf
 *.docx
-
+*.ipynb_checkpoints
 vita_ml_env
 parag_K-FOLD.ipynb
