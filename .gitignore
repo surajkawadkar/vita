@@ -4,3 +4,10 @@
 *.ipynb_checkpoints
 vita_ml_env
 parag_K-FOLD.ipynb
+*.rar
+*.zip
+mnist_test.csv
+mnist_train.csv
+tensorflow_mnist_model_saved.h5
+"MACHINE LEARNING/Neural Network/CNN/dataset"
+023_Parag Thakur_Fashion_ANN.ipynb
