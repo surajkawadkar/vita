@@ -1,0 +1,24 @@
+Q1 1.	Swap 2 variable without using 3rd variable. (Give minimum three solutions)
+
+a,b=map(int,input('enter 2 number').split())
+a,b=b,a
+print(a,b)
+
+solution 2
+a,b=map(int,input('enter 2 number').split())
+a=a+b
+b=a-b
+a=a-b
+print(a,b)
+
+
+solution 3:
+a,b=map(int,input('enter 2 number').split())
+a=a*b
+b=a/b
+a=a/b
+print(a,b)
+
+
+####################################################################
+Q 2: 
