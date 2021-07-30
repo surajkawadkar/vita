@@ -76,3 +76,34 @@ def even_odd(num):
     print("odd")
 number=int(input("enter the number"))
 even_odd(number)
+
+#####################################################################
+5.	Accept a number from the user check if it is odd or even number (Do not use % operator).
+
+idea:
+ input : 5    // odd
+   00000101              
+ & 00000001                
+--------------                
+   00000001       
+--------------
+
+input : 8     //even
+   00001000              
+ & 00000001                 
+--------------               
+   00000000 
+
+
+solution: using biwise oprator 
+
+def even_odd(n):
+  return (n&1)
+
+num=int(input("enter the number"))
+if (even_odd(num)==0):
+  print("even")
+else:
+  print('odd')
+
+#####################################################
