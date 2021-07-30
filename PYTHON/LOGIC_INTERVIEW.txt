@@ -107,3 +107,11 @@ else:
   print('odd')
 
 #####################################################
+Q6.
+6.Accept principal amount, rate of interest and years of investment then find the simple interest
+
+solution:
+def simpleInterest(amt,ror,yr):
+  return amt*ror*yr/100
+amt,ror,yr= map(float,input("enter amount and rate of interest and years").split())
+print(simpleInterest(amt,ror,yr))
