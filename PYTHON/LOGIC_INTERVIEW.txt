@@ -21,4 +21,58 @@ print(a,b)
 
 
 ####################################################################
-Q 2: 
+Q 2: 2.	Accept the marks from the user and print the corresponding grade
+	a.	Marks>=75	grade A
+	b.	Marks >=55  grade B
+	c.  Marks >=35	grade C
+	d.	Else fail
+
+
+solution: 
+marks=int(input("enter marks"))
+if marks>=75:
+  print("Grade A")
+elif marks>=55:
+  print("Grade B")
+elif marks>=35:
+  print("Grade C")
+else:
+  print("Fail")
+
+
+
+#########################################################
+Q3.
+3.	Accept a number from the user - if it is divisible by 3 print "Three" ,
+ if it is divisible by 7 print "Seven" and 
+if it is divisible by both 3 & 7, print ''Three - Seven".
+
+
+
+
+solution:
+num= int(input("Enter the number"))
+if num% 3==0 and num %7==0:
+  print("Theree and seven")
+elif num% 3==0:
+  print("Theree") 
+elif num %7==0:
+  print(" seven")
+else:
+  print("neither Three nor seven")
+
+
+##############################################################
+Q 4.
+
+4.	Accept a number from the user and check if it is odd or even number
+ (Hint: use % operator).
+
+solution
+def even_odd(num):
+  if num%2==0:
+    print("even")
+  else:
+    print("odd")
+number=int(input("enter the number"))
+even_odd(number)
