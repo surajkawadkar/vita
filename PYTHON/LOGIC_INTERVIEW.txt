@@ -222,3 +222,25 @@ while(num>0):
 print(sum)
 
 ######################################################################
+# 12.	Accept a number from the user and reverse it. Accept a number from the user and 
+# check if it is palindrome number or not.
+
+solution:
+
+rev=0
+num= int(input("wnter the number"))
+origional_num=num
+while(num>0):
+  rem=num%10
+  rev=rev*10+rem
+  num=num//10
+
+
+print(rev)
+
+
+if rev==origional_num:
+  print('palindrome number')
+else:
+  print("not palindrome")
+####################################################################
