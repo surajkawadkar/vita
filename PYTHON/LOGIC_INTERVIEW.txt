@@ -244,3 +244,13 @@ if rev==origional_num:
 else:
   print("not palindrome")
 ####################################################################
+# 13.	Accept a number from the user and print a table for that number.
+
+solution:
+
+num= int(input('num'))
+i=1
+while(i<11):
+  print(i*num)
+  i+=1
+##########################################
