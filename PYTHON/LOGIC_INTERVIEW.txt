@@ -180,3 +180,12 @@ for i in range(10):
   x= int(input('enter the number'))
   sum+=x
 print('total='sum)
+
+################################################
+# 9.	Accept a number from the user and find the factorial of the number.
+num= int(input('enter the number'))
+fact=1
+while(num>1):
+  fact=fact*num
+  num-=1
+print(fact)
