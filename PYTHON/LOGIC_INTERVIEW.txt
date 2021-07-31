@@ -189,3 +189,23 @@ while(num>1):
   fact=fact*num
   num-=1
 print(fact)
+##############################################################
+
+# 10.	Accept 10 numbers from the user and count how many are positive, negative or zero. 
+
+solution:
+
+neg=0
+pos=0
+zero=0
+for i in range(10):
+  x=int(input())
+  if x>0:
+    pos+=1
+  elif x<0:
+    neg+=1
+  else:
+    zero+=1
+print("positives negatices and zeros are"pos,neg,zero)
+
+################################################################
