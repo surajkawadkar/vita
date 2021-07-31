@@ -209,3 +209,16 @@ for i in range(10):
 print("positives negatices and zeros are"pos,neg,zero)
 
 ################################################################
+# 11. Accept a number from the user and calculate the sum of the digits of the number.
+
+solution:
+
+num=int(input("enter the number"))
+sum=0
+while(num>0):
+  rem=num%10
+  sum+=rem
+  num=num//10
+print(sum)
+
+######################################################################
