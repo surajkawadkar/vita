@@ -253,4 +253,40 @@ i=1
 while(i<11):
   print(i*num)
   i+=1
-##########################################
+#################################################################
+# 14.	Accept a number from the user check if it is special number or not?
+# Example: 145
+# 1! =1
+# 4!=1*2*3*4 
+# 5!=1*2*3*4*5
+# Sum of the factorials is (1+24+120=145)
+
+solution:
+
+def fact_num(n):
+  fact=1
+  while n>0:
+    fact=fact*n  
+    n-=1
+  return fact
+def split_num(num):
+  total=0
+  while num>0:
+    
+    rem=num%10
+    num=num//10
+    total+=fact_num(rem)
+  return total
+
+
+num = int(input("enter the number"))
+
+print(split_num(num))
+special_no=split_num(num)
+
+if special_no==num:
+  print('special number')
+else:
+  print("not special number")
+
+#########################################################################
