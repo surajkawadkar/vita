@@ -290,3 +290,34 @@ else:
   print("not special number")
 
 #########################################################################
+
+# 15.	Accept a number from the user and check if it is an Armstrong number or not?
+# Example: 153
+# 1cube =1
+# 5 cube= 125
+# 3 cube = 27
+# Sum of the cubes is (1+27+125=153)
+
+solution:
+
+def armstrong(num):
+  total=0
+  while(num>0):
+
+    rem=num%10
+    total=total+rem**3
+    num=num//10
+  return total
+
+
+number= int(input("enter the number to be chhecked"))
+print("number becomes ",armstrong(number))
+
+arms_no=armstrong(number)
+if arms_no==number:
+  print("armstrong number")
+else:
+  print("not an armstrong number")
+
+
+#############################################################
