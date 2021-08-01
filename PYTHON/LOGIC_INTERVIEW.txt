@@ -354,3 +354,13 @@ while number>=i:
   print(i,end=', ')
   i+=1
 ####################################################################
+# 19.	Accept a start and end range from the user and print all even number between them. (Give minimum two solutions).
+
+solution 1:
+for i in range(2,20,2):
+  print(i)
+
+solution 2:
+for i in range(2,20,2):
+  if i%2==0:
+    print(i)
