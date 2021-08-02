@@ -518,3 +518,23 @@ for i in range(2000):
     print(i,end=', ')
 
 ######################################################################
+# 29.	Accept a number from the user and check if it is a prime number or not.
+
+solution:
+def prime(n):
+  i=2
+  while(i<n):
+    if n%i==0:
+      flag=0
+      return flag
+    else:
+      flag=1
+      return flag
+number=int(input("enter the number"))
+flag=prime(number)
+if flag==1:
+  print("prime no")
+else:
+  print("non prime no")
+
+##################################################################
