@@ -445,5 +445,15 @@ print(min(list1))
 
 #######################################################
 
+# 25.	Accept 10 numbers from the user and print the highest and the 2nd highest number.
+solution:
+list2=[]
+for i in range(10):
+  x=int(input("enter the number"))
+  list2.append(x)
+print(list2)
+list2.sort(reverse=True) 
+#NOTE sort modify the existing array sorted return new array
+print("second highest is",list2[1])
 
-
+#####################################################################
