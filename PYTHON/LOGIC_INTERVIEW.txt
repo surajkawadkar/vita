@@ -398,3 +398,19 @@ while (count<nterm):
   count+=1
 
 ##################################################
+Q 22.	Accept a number and a single digit from the user. Then check the number of occurrences of that digit in the number.
+
+solution 1:
+number= int(input("enter a number r"))
+n_check = int(input("single digit no"))
+count=0
+while number>0:
+  if number%10 ==n_check:
+    count+=1
+  number = number//10
+print(count)
+
+solution 2:
+arr=[int(i) for i in str(number) ]
+print(arr.count(n_check)) 
+####################################################################
