@@ -425,3 +425,10 @@ for i in range(10):
   else:
     continue
 print('max value is',high)
+
+solution 2:
+list1=[]
+for i in range(10):
+  x= int(input("enter number"))
+  list1.append(x)
+print(max(list1))
