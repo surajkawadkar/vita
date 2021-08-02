@@ -378,3 +378,23 @@ for i in range(2,20,2):
     print(i)
 
 ####################################################################
+# 21.	Accept a number from the user and print the Fibonacci series till that number.
+
+# 0,1,1,2,3,5,8,13,
+
+
+solution:
+nterm=int(input("enter the nth number till you wish to print fibb series"))
+
+n1=0
+n2=1
+count=0
+while (count<nterm):
+  nth=n1+n2
+  print(n1,end=',')
+  # updates
+  n1=n2
+  n2=nth
+  count+=1
+
+##################################################
