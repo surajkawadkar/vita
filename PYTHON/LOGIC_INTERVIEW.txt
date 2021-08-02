@@ -414,3 +414,14 @@ solution 2:
 arr=[int(i) for i in str(number) ]
 print(arr.count(n_check)) 
 ####################################################################
+# 23.	Accept 10 numbers from the user and print the highest number.
+
+solution:
+high=0
+for i in range(10):
+  num= int(input())
+  if high<num:
+    high=num
+  else:
+    continue
+print('max value is',high)
