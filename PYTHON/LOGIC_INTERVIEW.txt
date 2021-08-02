@@ -475,4 +475,28 @@ while start<num:
     start+=1
   else:
     start+=1
-  
+
+#########################################################################
+# 27.	Print all special numbers between 1to 200000.
+
+solution:
+def factorial(num):
+  fact=1
+  while num>0:
+    fact*=num
+    num-=1
+  return fact
+
+
+def split(n):
+  total=0
+  while n>0:
+    rem=n%10
+    total+=factorial(rem)
+    n=n//10
+  return total
+
+for i in range(2000):
+  if split(i)==i:
+    print(i,end=', ')  
+#########################################################################
