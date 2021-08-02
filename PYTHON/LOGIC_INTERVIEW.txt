@@ -432,3 +432,18 @@ for i in range(10):
   x= int(input("enter number"))
   list1.append(x)
 print(max(list1))
+
+#####################################################################
+# 24.	Accept 10 numbers from the user and print the lowest number.
+
+solution:
+list1=[]
+for i in range(10):
+  x= int(input("enter number"))
+  list1.append(x)
+print(min(list1))
+
+#######################################################
+
+
+
