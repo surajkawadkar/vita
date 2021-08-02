@@ -500,3 +500,21 @@ for i in range(2000):
   if split(i)==i:
     print(i,end=', ')  
 #########################################################################
+# 28.	Print all Armstrong number between 1to 200000.
+
+solution:
+def armstrong(n):
+  total=0
+  while n>0:
+    rem=n%10
+    total+=rem**3
+    n=n//10
+  return total
+
+
+
+for i in range(2000):
+  if i==armstrong(i):
+    print(i,end=', ')
+
+######################################################################
